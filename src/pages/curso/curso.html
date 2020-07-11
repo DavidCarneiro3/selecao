@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar color="secondary">
+    <ion-title>Informações do Curso</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list no-lines>
+    <ion-item>
+        
+      <ion-thumbnail item-start>
+        <img src="{{'./assets/imgs/'+curso.img}}">
+      </ion-thumbnail>
+      <h2 class="title">{{curso.name}}</h2>
+      <p>{{'Facilitador: '+curso.facil}}</p>
+      </ion-item>
+  <ion-item>
+    <ion-avatar item-start>
+      <p><ion-icon item-left large name="md-calendar"></ion-icon></p>
+    </ion-avatar>
+    <h3>Realizado em:</h3>
+    <h2>{{curso.dt_rel}}</h2>
+  </ion-item>
+  <ion-item>
+    <ion-avatar item-start>
+      <p><ion-icon item-left large name="clock"></ion-icon></p>
+    </ion-avatar>
+    <h3>Carga horária:</h3>
+    <h2>{{curso.c_hr}}</h2>
+  </ion-item>
+  <ion-item>
+    <h3 class="text">Conteúdo</h3>
+    <p class="value">Introdução</p>
+    <p class="value">Metodologia</p>
+    <p class="value">Conclusão</p>
+  </ion-item>
+    </ion-list>
+</ion-content>

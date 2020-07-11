@@ -1,0 +1,60 @@
+<ion-header>
+<ion-navbar color="primary">
+  <ion-title>{{ title }}</ion-title>
+</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<div [formGroup]="form">
+  <ion-item>
+    <ion-label stacked>Curso</ion-label>
+    <ion-input type="text" formControlName="name"></ion-input>
+  </ion-item>
+  <ion-item *ngIf="!form.controls.name.valid && (form.controls.name.dirty || form.controls.name.touched)" color="danger">
+    <div [hidden]="!form.controls.name.errors.required">
+      O campo é obrigatório
+    </div>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Facilitador</ion-label>
+    <ion-input type="text" formControlName="facil"></ion-input>
+  </ion-item>
+  <ion-item *ngIf="!form.controls.facil.valid && (form.controls.facil.dirty || form.controls.facil.touched)" color="danger">
+    <div [hidden]="!form.controls.facil.errors.required">
+      O campo é obrigatório
+    </div>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>Horas</ion-label>
+    <ion-input type="text" formControlName="c_hr"></ion-input>
+  </ion-item>
+  <ion-item *ngIf="!form.controls.c_hr.valid && (form.controls.c_hr.dirty || form.controls.c_hr.touched)" color="danger">
+    <div [hidden]="!form.controls.c_hr.errors.required">
+      O campo é obrigatório
+    </div>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>Realização</ion-label>
+    <ion-input type="tex" formControlName="dt_rel"></ion-input>
+  </ion-item>
+  <ion-item *ngIf="!form.controls.dt_rel.valid && (form.controls.dt_rel.dirty || form.controls.dt_rel.touched)" color="danger">
+    <div [hidden]="!form.controls.dt_rel.errors.required">
+      O campo é obrigatório
+    </div>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>img</ion-label>
+    <ion-input type="text" formControlName="img"></ion-input>
+  </ion-item>
+  <ion-item *ngIf="!form.controls.img.valid && (form.controls.img.dirty || form.controls.img.touched)" color="danger">
+    <div [hidden]="!form.controls.img.errors.required">
+      O campo é obrigatório
+    </div>
+  </ion-item>
+
+  <div padding>
+    <button ion-button block type="" [disabled]="!form.valid" (tap)="add()">Salvar</button>
+  </div>
+</div>
+</ion-content>
